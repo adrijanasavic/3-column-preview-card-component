@@ -1,3 +1,113 @@
-body{
-    background-color: rebeccapurple;
+@import 'variables';
+
+* {
+    font-size: $font-size;
+
+}
+
+body {
+    font-family: $font-family-1;
+    margin     : 0;
+    padding    : 0;
+}
+
+.flex-wrapper {
+    display        : flex;
+    max-width      : 1440px;
+    margin         : 0 auto;
+    justify-content: center;
+    align-items    : center;
+    height         : calc(100vh - 20px);
+
+    @media(max-width: 767px) {
+        height        : auto;
+        flex-direction: column;
+    }
+
+    .wrapper {
+        height         : 350px;
+        width          : 210px;
+        display        : flex;
+        flex-direction : column;
+        justify-content: space-evenly;
+        align-items    : flex-start;
+        padding        : 40px;
+
+        &.bg1 {
+            background-color: $bright-orange;
+        }
+
+        &.bg2 {
+            background-color: $dark-cyan;
+        }
+
+        &.bg3 {
+            background-color: $very-dark-cyan;
+        }
+
+        p {
+            color        : $transparent-white;
+            margin-bottom: 80px;
+        }
+
+        .btn {
+            background-color: $very-light-gray;
+            border          : none;
+            padding         : 10px;
+            border-radius   : 20px;
+            font-family     : $font-family-1;
+            width           : 120px;
+
+            &.b1 {
+                color: $bright-orange;
+            }
+
+            &.b1:hover {
+                background-color: $bright-orange;
+                color           : $very-light-gray;
+                border          : 2px solid $very-light-gray;
+            }
+
+            &.b2 {
+                color: $dark-cyan;
+            }
+
+            &.b2:hover {
+                background-color: $dark-cyan;
+                color           : $very-light-gray;
+                border          : 2px solid $very-light-gray;
+            }
+
+            &.b3 {
+                color: $very-dark-cyan;
+            }
+
+            &.b3:hover {
+                background-color: $very-dark-cyan;
+                color           : $very-light-gray;
+                border          : 2px solid $very-light-gray;
+            }
+        }
+    }
+
+    .title {
+        font-family   : $font-family-2;
+        text-transform: uppercase;
+        color         : $very-light-gray;
+        font-size     : 36px;
+    }
+}
+
+.attribution {
+    font-size : $font-size;
+    text-align: center;
+
+    a {
+        color          : $bright-orange;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $dark-cyan;
+    }
 }
